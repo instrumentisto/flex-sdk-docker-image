@@ -1,5 +1,5 @@
 # https://hub.docker.com/r/frekele/gradle
-FROM frekele/gradle:latest
+FROM frekele/gradle:3-jdk8
 
 MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
 
@@ -76,5 +76,3 @@ WORKDIR /app
 
 
 ENTRYPOINT []
-
-CMD gradle
