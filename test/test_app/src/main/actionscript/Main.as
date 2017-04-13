@@ -13,7 +13,7 @@ public class Main extends Sprite
 {
 
     /**
-     * The exits with code 0 immediately.
+     * Exits with code 0 immediately.
      */
     public function Main()
     {
