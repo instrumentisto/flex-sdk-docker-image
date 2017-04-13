@@ -1,0 +1,100 @@
+/**
+ * Test application gradle build script.
+ *
+ *  Configure build.
+ */
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.4.0'
+        classpath 'de.undercouch:gradle-download-task:2.0.0'
+    }
+}
+
+/**
+ * Apply plugin gradleFx.
+ */
+apply plugin: 'gradlefx'
+
+/**
+ * Apply plugin templates.
+ */
+apply plugin: 'templates'
+
+/**
+ * Apply plugin scaffold for create bese application structure.
+ */
+apply plugin: 'scaffold'
+
+/**
+ * Apply plugin `download` for download flex-unit lib.
+ */
+apply plugin: 'de.undercouch.download'
+
+/**
+ * Configure dependencies.
+ */
+dependencies {
+    test fileTree(dir: "$LIB_FLEXUNIT/flexunit", include: '*.swc')
+    test fileTree(dir: "$LIB_FLEXUNIT/flexunit", include: '*.jar')
+}
+
+/**
+ * Sets project typ `swf`
+ */
+type = 'swf'
+
+/**
+ * Sets pure as project.
+ */
+frameworkLinkage = 'none'
+
+/**
+ * Sets additional compiler options.
+ */
+additionalCompilerOptions = [
+        "-target-player=23.0",
+        "-headless-server=true",
+        "-debug=true",
+        "-omit-trace-statements=true",
+]
+
+/**
+ * Sets additional compiler options for flex-unit.
+ */
+flexUnit {
+    additionalCompilerOptions = [
+            "-target-player=23.0",
+            '-incremental=true',
+            '-swf-version=23'
+    ]
+}
+
+/**
+ * Download flex-unit lib.
+ */
+task downloadFlexUnit(type: de.undercouch.gradle.tasks.download.Download) {
+    src URL_FLEXUNIT
+    dest new java.io.File(TMP_DIR, "flexunit.zip")
+}
+
+/**
+ * Unzip flex-unit.
+ */
+task downloadAndUnzipFlexUnit(type: Copy) {
+    if (!file("$LIB_FLEXUNIT/flexunit").exists()) {
+        dependsOn downloadFlexUnit
+        from zipTree(downloadFlexUnit.dest)
+        into LIB_FLEXUNIT
+    }
+}
+
+/**
+ * Sets dependency for `testFx` task for download flex-unit before
+ * execution of task.
+ */
+testFx.dependsOn downloadAndUnzipFlexUnit

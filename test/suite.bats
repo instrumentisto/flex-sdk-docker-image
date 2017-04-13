@@ -70,6 +70,6 @@
 }
 
 @test "flashplayerdebugger runs ok" {
-  # TODO
-  #[ "$status" -eq 0 ]
+  run docker run --rm -v $(pwd)/test/app:/app $IMAGE xvfb gradle buildFx
+  [ "$status" -eq 0 ]
 }
