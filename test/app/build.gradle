@@ -97,4 +97,3 @@ task downloadAndUnzipFlexUnit(type: Copy) {
  * execution of task.
  */
 testFx.dependsOn downloadAndUnzipFlexUnit
-
