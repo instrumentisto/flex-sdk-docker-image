@@ -1,6 +1,9 @@
 package
 {
 
+import org.flexunit.asserts.assertTrue;
+
+
 /**
  * Simple test case.
  */

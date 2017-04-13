@@ -69,7 +69,8 @@ additionalCompilerOptions = [
 flexUnit {
     additionalCompilerOptions = [
             "-target-player=23.0",
-            '-incremental=true'
+            '-incremental=true',
+            '-swf-version=23'
     ]
 }
 
