@@ -14,7 +14,7 @@ RUN update-ca-certificates \
             rsync \
             bzip2 \
 
- && curl -L -o /tmp/flex-sdk.tar.gz \
+ && curl -fL -o /tmp/flex-sdk.tar.gz \
          http://apache.cbox.biz/flex/4.16.0/binaries/apache-flex-sdk-4.16.0-bin.tar.gz \
  && tar -xzf /tmp/flex-sdk.tar.gz -C /tmp \
  && mv /tmp/apache-flex-sdk-* $FLEX_HOME \
@@ -42,8 +42,8 @@ RUN apt-get update \
             libnss3 libgtk2.0-0 \
             xvfb xauth \
 
- && curl -L -o /tmp/flash_player.tar.gz \
-         https://fpdownload.macromedia.com/pub/flashplayer/updaters/25/flash_player_sa_linux_debug.x86_64.tar.gz \
+ && curl -fL -o /tmp/flash_player.tar.gz \
+         https://fpdownload.macromedia.com/pub/flashplayer/updaters/26/flash_player_sa_linux_debug.x86_64.tar.gz \
  && tar -xzf /tmp/flash_player.tar.gz -C /tmp \
  && mv /tmp/flashplayerdebugger /usr/local/bin/ \
  && mkdir -p /usr/local/doc/flashplayerdebugger \

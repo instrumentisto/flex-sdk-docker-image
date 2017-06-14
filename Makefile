@@ -12,8 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/flex-sdk
-VERSION ?= 4.16.0-fp25.0.0.171
-TAGS ?= 4.16.0-fp25.0.0.171,4.16.0-fp25,4.16.0,4.16,4,latest
+VERSION ?= 4.16.0-fp26.0.0.126
+TAGS ?= 4.16.0-fp26.0.0.126,4.16.0-fp26,4.16.0,4.16,4,latest
 
 no-cache ?= no
 
@@ -113,7 +113,7 @@ BATS_VER ?= 0.4.0
 deps.bats:
 ifeq ($(wildcard $(PWD)/test/bats),)
 	mkdir -p $(PWD)/test/bats/vendor
-	curl -L -o $(PWD)/test/bats/vendor/bats.tar.gz \
+	curl -fL -o $(PWD)/test/bats/vendor/bats.tar.gz \
 		https://github.com/sstephenson/bats/archive/v$(BATS_VER).tar.gz
 	tar -xzf $(PWD)/test/bats/vendor/bats.tar.gz \
 		-C $(PWD)/test/bats/vendor
