@@ -1,9 +1,7 @@
 Flex SDK Docker Image
 =====================
 
-[![GitHub release](https://img.shields.io/github/release/instrumentisto/flex-sdk-docker-image.svg)](https://hub.docker.com/r/instrumentisto/flex-sdk/tags)
-[![Build Status](https://travis-ci.org/instrumentisto/flex-sdk-docker-image.svg?branch=master)](https://travis-ci.org/instrumentisto/flex-sdk-docker-image)
-[![Docker Pulls](https://img.shields.io/docker/pulls/instrumentisto/flex-sdk.svg)](https://hub.docker.com/r/instrumentisto/flex-sdk)
+[![GitHub release](https://img.shields.io/github/release/instrumentisto/flex-sdk-docker-image.svg)](https://hub.docker.com/r/instrumentisto/flex-sdk/tags) [![Build Status](https://travis-ci.org/instrumentisto/flex-sdk-docker-image.svg?branch=master)](https://travis-ci.org/instrumentisto/flex-sdk-docker-image) [![Docker Pulls](https://img.shields.io/docker/pulls/instrumentisto/flex-sdk.svg)](https://hub.docker.com/r/instrumentisto/flex-sdk)
 
 
 
