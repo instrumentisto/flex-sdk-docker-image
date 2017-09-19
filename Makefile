@@ -12,8 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/flex-sdk
-VERSION ?= 4.16.0-fp26.0.0.151
-TAGS ?= 4.16.0-fp26.0.0.151,4.16.0-fp26,4.16.0,4.16,4,latest
+VERSION ?= 4.16.0-fp27.0.0.130
+TAGS ?= 4.16.0-fp27.0.0.130,4.16.0-fp27,4.16.0,4.16,4,latest
 
 no-cache ?= no
 
@@ -31,7 +31,7 @@ eq = $(if $(or $(1),$(2)),$(and $(findstring $(1),$(2)),\
 # Usage:
 #	make image [no-cache=(yes|no)] [VERSION=]
 
-no-cache-arg = $(if $(call eq, $(no-cache), yes), --no-cache, $(empty))
+no-cache-arg = $(if $(call eq,$(no-cache),yes),--no-cache,)
 
 image:
 	docker build $(no-cache-arg) -t $(IMAGE_NAME):$(VERSION) .
