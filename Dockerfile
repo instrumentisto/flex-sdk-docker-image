@@ -15,7 +15,7 @@ RUN update-ca-certificates \
             bzip2 \
 
  && curl -fL -o /tmp/flex-sdk.tar.gz \
-         http://apache.cbox.biz/flex/4.16.0/binaries/apache-flex-sdk-4.16.0-bin.tar.gz \
+         http://apache.cbox.biz/flex/4.16.1/binaries/apache-flex-sdk-4.16.1-bin.tar.gz \
  && tar -xzf /tmp/flex-sdk.tar.gz -C /tmp \
  && mv /tmp/apache-flex-sdk-* $FLEX_HOME \
  && cd $FLEX_HOME \
