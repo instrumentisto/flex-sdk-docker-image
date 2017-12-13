@@ -12,8 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/flex-sdk
-VERSION ?= 4.16.1-fp27.0.0.187
-TAGS ?= 4.16.1-fp27.0.0.187,4.16.1-fp27,4.16.1,4.16,4,latest
+VERSION ?= 4.16.1-fp28.0.0.126
+TAGS ?= 4.16.1-fp28.0.0.126,4.16.1-fp28,4.16.1,4.16,4,latest
 
 no-cache ?= no
 
