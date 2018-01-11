@@ -13,7 +13,7 @@ RUN update-ca-certificates \
             ant \
             rsync \
             bzip2 \
-
+    \
  && curl -fL -o /tmp/flex-sdk.tar.gz \
          http://apache.cbox.biz/flex/4.16.1/binaries/apache-flex-sdk-4.16.1-bin.tar.gz \
  && tar -xzf /tmp/flex-sdk.tar.gz -C /tmp \
@@ -25,7 +25,7 @@ RUN update-ca-certificates \
                          -Dinput.fontswf.download=y \
                          -Dinput.flash.download=y \
  && chown -R root:root $FLEX_HOME \
-
+    \
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \
             bzip2 \
@@ -41,7 +41,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
             libnss3 libgtk2.0-0 \
             xvfb xauth \
-
+    \
  && curl -fL -o /tmp/flash_player.tar.gz \
          https://fpdownload.macromedia.com/pub/flashplayer/updaters/28/flash_player_sa_linux_debug.x86_64.tar.gz \
  && tar -xzf /tmp/flash_player.tar.gz -C /tmp \
@@ -50,7 +50,7 @@ RUN apt-get update \
  && mv /tmp/LGPL/* /usr/local/doc/flashplayerdebugger/ \
  && chown -R root:root /usr/local/bin/flashplayerdebugger \
                        /usr/local/doc/flashplayerdebugger \
-
+    \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
            /tmp/*
