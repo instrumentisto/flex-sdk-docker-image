@@ -43,7 +43,7 @@ RUN apt-get update \
             xvfb xauth \
     \
  && curl -fL -o /tmp/flash_player.tar.gz \
-         https://fpdownload.macromedia.com/pub/flashplayer/updaters/29/flash_player_sa_linux_debug.x86_64.tar.gz \
+         https://fpdownload.macromedia.com/pub/flashplayer/updaters/30/flash_player_sa_linux_debug.x86_64.tar.gz \
  && tar -xzf /tmp/flash_player.tar.gz -C /tmp \
  && mv /tmp/flashplayerdebugger /usr/local/bin/ \
  && mkdir -p /usr/local/doc/flashplayerdebugger \

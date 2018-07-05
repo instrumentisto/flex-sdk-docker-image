@@ -57,7 +57,7 @@ frameworkLinkage = 'none'
  * Sets additional compiler options.
  */
 additionalCompilerOptions = [
-        "-target-player=29.0",
+        "-target-player=30.0",
         "-headless-server=true",
         "-debug=true",
         "-omit-trace-statements=true",
@@ -68,9 +68,9 @@ additionalCompilerOptions = [
  */
 flexUnit {
     additionalCompilerOptions = [
-            "-target-player=29.0",
+            "-target-player=30.0",
             '-incremental=true',
-            '-swf-version=29'
+            '-swf-version=30'
     ]
 }
 
