@@ -6,6 +6,13 @@ Flex SDK Docker Image
 
 
 
+## Status
+
+__PROJECT IS CLOSED AND ARCHIVED. NO MAINTAINING WILL BE CONTINUED.__
+
+
+
+
 ## What is Flex SDK?
 
 Flex is a powerful, open source application framework that allows you to easily build mobile applications for iOS, Android™, and BlackBerry® Tablet OS devices, as well as traditional applications for browser and desktop using the same programming model, tool, and codebase. You can use the Flex SDK to create a wide range of highly interactive, expressive applications. For example, a data visualization application built in Flex can pull data from multiple back-end sources and display it visually.
